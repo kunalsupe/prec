@@ -1,0 +1,54 @@
+<div id="pageTitle">
+		<h1>Edit <%= @rating.rate%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @rating.object %>
+    <%= link_to "Delete", :action => :delete, :id => @rating.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @rating.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Rate: </td>
+              			<td class="itemValue"><input type="text" name="rating[rate]" value="<%= @rating.rate %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Comment title: </td>
+              			<td class="itemValue"><input type="text" name="rating[comment_title]" value="<%= @rating.comment_title %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Comment: </td>
+              			<td class="itemValue"><input type="text" name="rating[comment]" value="<%= @rating.comment %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Approved: </td>
+              			<td class="itemValue"><input type="text" name="rating[approved]" value="<%= @rating.approved %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Property: </td>
+              			<td class="itemValue"><input type="text" name="rating[property_id]" value="<%= @rating.property_id %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Created at: </td>
+              			<td class="itemValue"><input type="text" name="rating[created_at]" value="<%= @rating.created_at %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Updated at: </td>
+              			<td class="itemValue"><input type="text" name="rating[updated_at]" value="<%= @rating.updated_at %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

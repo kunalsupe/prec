@@ -1,0 +1,57 @@
+<div class="pageTitle">
+  <h1>Edit <%= @payment.plan %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @payment.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @payment.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @payment.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="payment[plan]" class="fieldLabel">Plan</label>
+            <input type="text" name="payment[plan]" value="<%= @payment.plan %>" <%= placeholder( "Plan" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[price]" class="fieldLabel">Price</label>
+            <input type="text" name="payment[price]" value="<%= @payment.price %>" <%= placeholder( "Price" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[expiry]" class="fieldLabel">Expiry</label>
+            <input type="text" name="payment[expiry]" value="<%= @payment.expiry %>" <%= placeholder( "Expiry" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[status]" class="fieldLabel">Status</label>
+            <input type="text" name="payment[status]" value="<%= @payment.status %>" <%= placeholder( "Status" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[property_id]" class="fieldLabel">Property</label>
+            <input type="text" name="payment[property_id]" value="<%= @payment.property_id %>" <%= placeholder( "Property" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="payment[created_at]" value="<%= @payment.created_at %>" <%= placeholder( "Created at" ) %> />
+          </li>
+      
+          <li>
+            <label for="payment[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="payment[updated_at]" value="<%= @payment.updated_at %>" <%= placeholder( "Updated at" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

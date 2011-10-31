@@ -1,0 +1,61 @@
+<div class="pageTitle">
+  <h1>New <%= @payment.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a class="cancel" href="<%= url_for :action => :index %>">Cancel</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :create %>">
+    <input type="hidden" name="id" value="<%= @payment.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="payment[plan]" class="fieldLabel">Plan</label>
+            <input type="text" name="payment[plan]" <%=
+            placeholder("Plan") %> />
+          </li>
+      
+          <li>
+            <label for="payment[price]" class="fieldLabel">Price</label>
+            <input type="text" name="payment[price]" <%=
+            placeholder("Price") %> />
+          </li>
+      
+          <li>
+            <label for="payment[expiry]" class="fieldLabel">Expiry</label>
+            <input type="text" name="payment[expiry]" <%=
+            placeholder("Expiry") %> />
+          </li>
+      
+          <li>
+            <label for="payment[status]" class="fieldLabel">Status</label>
+            <input type="text" name="payment[status]" <%=
+            placeholder("Status") %> />
+          </li>
+      
+          <li>
+            <label for="payment[property_id]" class="fieldLabel">Property</label>
+            <input type="text" name="payment[property_id]" <%=
+            placeholder("Property") %> />
+          </li>
+      
+          <li>
+            <label for="payment[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="payment[created_at]" <%=
+            placeholder("Created at") %> />
+          </li>
+      
+          <li>
+            <label for="payment[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="payment[updated_at]" <%=
+            placeholder("Updated at") %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Create"/>
+  </form>
+</div>

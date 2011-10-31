@@ -1,0 +1,30 @@
+<div class="pageTitle">
+  <h1>For Sale</h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem regularButton">
+    <a href="<%= Rho::RhoConfig.start_path %>">Home</a>
+  </div>
+ 
+</div>
+
+<div class="content">
+  <ul>
+    
+       
+ <% @saleprop.each do |property| %>
+	 <li>
+          <a href="<%= url_for :action => :show, :id => property.object %>">
+            <span class="title"><%= property.title %></span><span class="disclosure_indicator"></span>
+          </a>   
+			
+        </li> 
+		
+			 
+			
+        <% end %>  
+
+   
+  </ul>
+</div>

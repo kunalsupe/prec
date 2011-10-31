@@ -1,0 +1,61 @@
+<div class="pageTitle">
+  <h1>New <%= @rating.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a class="cancel" href="<%= url_for :action => :index %>">Cancel</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :create %>">
+    <input type="hidden" name="id" value="<%= @rating.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="rating[rate]" class="fieldLabel">Rate</label>
+            <input type="text" name="rating[rate]" <%=
+            placeholder("Rate") %> />
+          </li>
+      
+          <li>
+            <label for="rating[comment_title]" class="fieldLabel">Comment title</label>
+            <input type="text" name="rating[comment_title]" <%=
+            placeholder("Comment title") %> />
+          </li>
+      
+          <li>
+            <label for="rating[comment]" class="fieldLabel">Comment</label>
+            <input type="text" name="rating[comment]" <%=
+            placeholder("Comment") %> />
+          </li>
+      
+          <li>
+            <label for="rating[approved]" class="fieldLabel">Approved</label>
+            <input type="text" name="rating[approved]" <%=
+            placeholder("Approved") %> />
+          </li>
+      
+          <li>
+            <label for="rating[property_id]" class="fieldLabel">Property</label>
+            <input type="text" name="rating[property_id]" <%=
+            placeholder("Property") %> />
+          </li>
+      
+          <li>
+            <label for="rating[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="rating[created_at]" <%=
+            placeholder("Created at") %> />
+          </li>
+      
+          <li>
+            <label for="rating[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="rating[updated_at]" <%=
+            placeholder("Updated at") %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Create"/>
+  </form>
+</div>

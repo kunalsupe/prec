@@ -1,0 +1,61 @@
+<div id="pageTitle">
+	<h1><%= @gallery.title%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @gallery.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Title</td>
+        <td class="itemValue"><%= @gallery.title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CreatedAt</td>
+        <td class="itemValue"><%= @gallery.created_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UpdatedAt</td>
+        <td class="itemValue"><%= @gallery.updated_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PhotoFileName</td>
+        <td class="itemValue"><%= @gallery.photo_file_name%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PhotoContentType</td>
+        <td class="itemValue"><%= @gallery.photo_content_type%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PhotoFileSize</td>
+        <td class="itemValue"><%= @gallery.photo_file_size%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PhotoUpdatedAt</td>
+        <td class="itemValue"><%= @gallery.photo_updated_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PropertyId</td>
+        <td class="itemValue"><%= @gallery.property_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @gallery.id%></td>
+      </tr>
+      
+    </table>
+</div>

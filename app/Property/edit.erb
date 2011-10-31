@@ -1,0 +1,177 @@
+<div class="pageTitle">
+  <h1>Edit <%= @property.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @property.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @property.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @property.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="property[title]" class="fieldLabel">Title</label>
+            <input type="text" name="property[title]" value="<%= @property.title %>" <%= placeholder( "Title" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[address]" class="fieldLabel">Address</label>
+            <input type="text" name="property[address]" value="<%= @property.address %>" <%= placeholder( "Address" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[city]" class="fieldLabel">City</label>
+            <input type="text" name="property[city]" value="<%= @property.city %>" <%= placeholder( "City" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[state]" class="fieldLabel">State</label>
+            <input type="text" name="property[state]" value="<%= @property.state %>" <%= placeholder( "State" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[country]" class="fieldLabel">Country</label>
+            <input type="text" name="property[country]" value="<%= @property.country %>" <%= placeholder( "Country" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[price]" class="fieldLabel">Price</label>
+            <input type="text" name="property[price]" value="<%= @property.price %>" <%= placeholder( "Price" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[description]" class="fieldLabel">Description</label>
+            <input type="text" name="property[description]" value="<%= @property.description %>" <%= placeholder( "Description" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[builder]" class="fieldLabel">Builder</label>
+            <input type="text" name="property[builder]" value="<%= @property.builder %>" <%= placeholder( "Builder" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[beds]" class="fieldLabel">Beds</label>
+            <input type="text" name="property[beds]" value="<%= @property.beds %>" <%= placeholder( "Beds" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[bathrooms]" class="fieldLabel">Bathrooms</label>
+            <input type="text" name="property[bathrooms]" value="<%= @property.bathrooms %>" <%= placeholder( "Bathrooms" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[kitchens]" class="fieldLabel">Kitchens</label>
+            <input type="text" name="property[kitchens]" value="<%= @property.kitchens %>" <%= placeholder( "Kitchens" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[year_build]" class="fieldLabel">Year build</label>
+            <input type="text" name="property[year_build]" value="<%= @property.year_build %>" <%= placeholder( "Year build" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[floor]" class="fieldLabel">Floor</label>
+            <input type="text" name="property[floor]" value="<%= @property.floor %>" <%= placeholder( "Floor" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[condition]" class="fieldLabel">Condition</label>
+            <input type="text" name="property[condition]" value="<%= @property.condition %>" <%= placeholder( "Condition" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[play_area]" class="fieldLabel">Play area</label>
+            <input type="text" name="property[play_area]" value="<%= @property.play_area %>" <%= placeholder( "Play area" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[tar_roads]" class="fieldLabel">Tar roads</label>
+            <input type="text" name="property[tar_roads]" value="<%= @property.tar_roads %>" <%= placeholder( "Tar roads" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[club_house]" class="fieldLabel">Club house</label>
+            <input type="text" name="property[club_house]" value="<%= @property.club_house %>" <%= placeholder( "Club house" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[swimming_pool]" class="fieldLabel">Swimming pool</label>
+            <input type="text" name="property[swimming_pool]" value="<%= @property.swimming_pool %>" <%= placeholder( "Swimming pool" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[party_hall]" class="fieldLabel">Party hall</label>
+            <input type="text" name="property[party_hall]" value="<%= @property.party_hall %>" <%= placeholder( "Party hall" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[health_club]" class="fieldLabel">Health club</label>
+            <input type="text" name="property[health_club]" value="<%= @property.health_club %>" <%= placeholder( "Health club" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[garden]" class="fieldLabel">Garden</label>
+            <input type="text" name="property[garden]" value="<%= @property.garden %>" <%= placeholder( "Garden" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[security]" class="fieldLabel">Security</label>
+            <input type="text" name="property[security]" value="<%= @property.security %>" <%= placeholder( "Security" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[intercom]" class="fieldLabel">Intercom</label>
+            <input type="text" name="property[intercom]" value="<%= @property.intercom %>" <%= placeholder( "Intercom" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[featured]" class="fieldLabel">Featured</label>
+            <input type="text" name="property[featured]" value="<%= @property.featured %>" <%= placeholder( "Featured" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[cat_id]" class="fieldLabel">Cat</label>
+            <input type="text" name="property[cat_id]" value="<%= @property.cat_id %>" <%= placeholder( "Cat" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[builder_id]" class="fieldLabel">Builder</label>
+            <input type="text" name="property[builder_id]" value="<%= @property.builder_id %>" <%= placeholder( "Builder" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="property[created_at]" value="<%= @property.created_at %>" <%= placeholder( "Created at" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="property[updated_at]" value="<%= @property.updated_at %>" <%= placeholder( "Updated at" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[sold]" class="fieldLabel">Sold</label>
+            <input type="text" name="property[sold]" value="<%= @property.sold %>" <%= placeholder( "Sold" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[latitude]" class="fieldLabel">Latitude</label>
+            <input type="text" name="property[latitude]" value="<%= @property.latitude %>" <%= placeholder( "Latitude" ) %> />
+          </li>
+      
+          <li>
+            <label for="property[longitude]" class="fieldLabel">Longitude</label>
+            <input type="text" name="property[longitude]" value="<%= @property.longitude %>" <%= placeholder( "Longitude" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

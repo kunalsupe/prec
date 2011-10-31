@@ -1,0 +1,51 @@
+<div id="pageTitle">
+	<h1><%= @rating.rate%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @rating.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Rate</td>
+        <td class="itemValue"><%= @rating.rate%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CommentTitle</td>
+        <td class="itemValue"><%= @rating.comment_title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Comment</td>
+        <td class="itemValue"><%= @rating.comment%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Approved</td>
+        <td class="itemValue"><%= @rating.approved%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PropertyId</td>
+        <td class="itemValue"><%= @rating.property_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CreatedAt</td>
+        <td class="itemValue"><%= @rating.created_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UpdatedAt</td>
+        <td class="itemValue"><%= @rating.updated_at%></td>
+      </tr>
+      
+    </table>
+</div>

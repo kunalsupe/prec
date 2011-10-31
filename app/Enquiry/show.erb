@@ -1,0 +1,58 @@
+<div class="pageTitle">
+  <h1><%= @enquiry.name %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @enquiry.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    
+        <li>
+          <div class="itemLabel">Name</div>
+          <div class="itemValue"><%= @enquiry.name %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Email</div>
+          <div class="itemValue"><%= @enquiry.email %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Contact</div>
+          <div class="itemValue"><%= @enquiry.contact %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Message</div>
+          <div class="itemValue"><%= @enquiry.message %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PropertyId</div>
+          <div class="itemValue"><%= @enquiry.property_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CreatedAt</div>
+          <div class="itemValue"><%= @enquiry.created_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">UpdatedAt</div>
+          <div class="itemValue"><%= @enquiry.updated_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">IsRead</div>
+          <div class="itemValue"><%= @enquiry.is_read %></div>
+        </li>
+    
+  </ul>
+</div>

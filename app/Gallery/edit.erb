@@ -1,0 +1,67 @@
+<div class="pageTitle">
+  <h1>Edit <%= @gallery.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @gallery.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @gallery.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @gallery.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="gallery[title]" class="fieldLabel">Title</label>
+            <input type="text" name="gallery[title]" value="<%= @gallery.title %>" <%= placeholder( "Title" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="gallery[created_at]" value="<%= @gallery.created_at %>" <%= placeholder( "Created at" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="gallery[updated_at]" value="<%= @gallery.updated_at %>" <%= placeholder( "Updated at" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[photo_file_name]" class="fieldLabel">Photo file name</label>
+            <input type="text" name="gallery[photo_file_name]" value="<%= @gallery.photo_file_name %>" <%= placeholder( "Photo file name" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[photo_content_type]" class="fieldLabel">Photo content type</label>
+            <input type="text" name="gallery[photo_content_type]" value="<%= @gallery.photo_content_type %>" <%= placeholder( "Photo content type" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[photo_file_size]" class="fieldLabel">Photo file size</label>
+            <input type="text" name="gallery[photo_file_size]" value="<%= @gallery.photo_file_size %>" <%= placeholder( "Photo file size" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[photo_updated_at]" class="fieldLabel">Photo updated at</label>
+            <input type="text" name="gallery[photo_updated_at]" value="<%= @gallery.photo_updated_at %>" <%= placeholder( "Photo updated at" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[property_id]" class="fieldLabel">Property</label>
+            <input type="text" name="gallery[property_id]" value="<%= @gallery.property_id %>" <%= placeholder( "Property" ) %> />
+          </li>
+      
+          <li>
+            <label for="gallery[id]" class="fieldLabel">Id</label>
+            <input type="text" name="gallery[id]" value="<%= @gallery.id %>" <%= placeholder( "Id" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

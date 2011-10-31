@@ -1,0 +1,39 @@
+<div id="pageTitle">
+		<h1>Edit <%= @category.title%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @category.object %>
+    <%= link_to "Delete", :action => :delete, :id => @category.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @category.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Title: </td>
+              			<td class="itemValue"><input type="text" name="category[title]" value="<%= @category.title %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Price: </td>
+              			<td class="itemValue"><input type="text" name="category[price]" value="<%= @category.price %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Created at: </td>
+              			<td class="itemValue"><input type="text" name="category[created_at]" value="<%= @category.created_at %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Updated at: </td>
+              			<td class="itemValue"><input type="text" name="category[updated_at]" value="<%= @category.updated_at %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

@@ -1,0 +1,56 @@
+<div id="pageTitle">
+	<h1><%= @enquiry.name%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @enquiry.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Name</td>
+        <td class="itemValue"><%= @enquiry.name%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Email</td>
+        <td class="itemValue"><%= @enquiry.email%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Contact</td>
+        <td class="itemValue"><%= @enquiry.contact%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Message</td>
+        <td class="itemValue"><%= @enquiry.message%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PropertyId</td>
+        <td class="itemValue"><%= @enquiry.property_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CreatedAt</td>
+        <td class="itemValue"><%= @enquiry.created_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UpdatedAt</td>
+        <td class="itemValue"><%= @enquiry.updated_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">IsRead</td>
+        <td class="itemValue"><%= @enquiry.is_read%></td>
+      </tr>
+      
+    </table>
+</div>

@@ -1,0 +1,48 @@
+<div class="pageTitle">
+  <h1>New <%= @enquiry.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a class="cancel" href="<%= url_for :action => :index %>">Cancel</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :create %>">
+    <input type="hidden" name="id" value="<%= @enquiry.object %>"/>
+   <input type="hidden" name="enquiry[property_id]" value="<%= @property.object %>"/> 
+   <input type="hidden" name="enquiry[is_read]" value="<%= false %>"/> 
+   <input type="hidden" name="enquiry[created_at]" value="<%= Time.now.strftime("%B %d, %Y %H:%M") %>"/>
+    <ul>
+      
+          <li>
+            <label for="enquiry[name]" class="fieldLabel">Name</label>
+            <input type="text" name="enquiry[name]" <%=
+            placeholder("Name") %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[email]" class="fieldLabel">Email</label>
+            <input type="text" name="enquiry[email]" <%=
+            placeholder("Email") %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[contact]" class="fieldLabel">Contact</label>
+            <input type="text" name="enquiry[contact]" <%=
+            placeholder("Contact") %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[message]" class="fieldLabel">Message</label>
+            <input type="text" name="enquiry[message]" <%=
+            placeholder("Message") %> />
+          </li>
+      
+      
+         
+    </ul>
+    <input type="submit" class="standardButton" value="Create"/>
+  </form>
+</div>

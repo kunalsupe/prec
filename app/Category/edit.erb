@@ -1,0 +1,42 @@
+<div class="pageTitle">
+  <h1>Edit <%= @category.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @category.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @category.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @category.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="category[title]" class="fieldLabel">Title</label>
+            <input type="text" name="category[title]" value="<%= @category.title %>" <%= placeholder( "Title" ) %> />
+          </li>
+      
+          <li>
+            <label for="category[price]" class="fieldLabel">Price</label>
+            <input type="text" name="category[price]" value="<%= @category.price %>" <%= placeholder( "Price" ) %> />
+          </li>
+      
+          <li>
+            <label for="category[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="category[created_at]" value="<%= @category.created_at %>" <%= placeholder( "Created at" ) %> />
+          </li>
+      
+          <li>
+            <label for="category[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="category[updated_at]" value="<%= @category.updated_at %>" <%= placeholder( "Updated at" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

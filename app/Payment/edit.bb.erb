@@ -1,0 +1,54 @@
+<div id="pageTitle">
+		<h1>Edit <%= @payment.plan%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @payment.object %>
+    <%= link_to "Delete", :action => :delete, :id => @payment.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @payment.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Plan: </td>
+              			<td class="itemValue"><input type="text" name="payment[plan]" value="<%= @payment.plan %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Price: </td>
+              			<td class="itemValue"><input type="text" name="payment[price]" value="<%= @payment.price %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Expiry: </td>
+              			<td class="itemValue"><input type="text" name="payment[expiry]" value="<%= @payment.expiry %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Status: </td>
+              			<td class="itemValue"><input type="text" name="payment[status]" value="<%= @payment.status %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Property: </td>
+              			<td class="itemValue"><input type="text" name="payment[property_id]" value="<%= @payment.property_id %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Created at: </td>
+              			<td class="itemValue"><input type="text" name="payment[created_at]" value="<%= @payment.created_at %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Updated at: </td>
+              			<td class="itemValue"><input type="text" name="payment[updated_at]" value="<%= @payment.updated_at %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

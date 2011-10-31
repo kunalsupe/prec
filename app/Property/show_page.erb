@@ -1,0 +1,56 @@
+<div class="pageTitle">
+  <h1>Search Properties</h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem regularButton">
+    <a href="<%= Rho::RhoConfig.start_path %>">Home</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :new %>">Add Property</a>
+  </div>
+</div>
+
+<div class="content">     
+ <form method="POST" action="<%= url_for :action => :search %>"> 
+  	 <ul> 
+
+		 <li>	<input type="text" name="city" <%=
+	     placeholder("City") %> />   </li>  
+		 
+		<li>	<input type="text" name="address" <%=
+	     placeholder("Address") %> />   </li>
+	   
+	 <li>
+		 <h2 class="groupTitle">Type</h2>
+		<ul>
+		<li><label for="type">For Sale</label>
+		    <input type ="radio" name="type" value ="1" /></li> 
+		 <li><label for="type">To Rent</label>
+			    <input type ="radio" name="type" value ="2" /></li>
+
+	      </li> </ul></li>   
+
+	  </ul>
+	<input type="submit" class="standardButton" value="Search"/>
+</form>  
+
+<div>
+<%= "Found #{@property.length} Property(s)." %> 
+</div>
+<% if !@property.empty? %>
+
+<% @property.each do |property| %>  
+<ul>
+	 <li>
+         <a href="<%= url_for :action => :show, :id => property.object %>">
+           <span class="title"><%= property.title %></span><span class="disclosure_indicator"></span>
+         </a>  </li>     </ul>
+<% end %> 
+<% end %> 
+          
+
+</div> 
+
+
+

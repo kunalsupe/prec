@@ -1,0 +1,24 @@
+sdk: "/Users/kunalsupe/Developer/.rvm/gems/ruby-1.9.2-p0/gems/rhodes-2.4.1"
+sdkversion: 2.4.1
+name: propertymanager
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+wmsdk: "Windows Mobile 6 Professional SDK (ARMV4I)"
+applog: rholog.txt
+iphone:
+  configuration: Debug
+  sdk: iphonesimulator4.3
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.propertymanager
+  BundleURLScheme: propertymanager
+wp:
+  productid: 'c877a320-ddf0-012e-f47f-60fb42f9f8f6'
+
+extensions: ["json", "net-http", "URI"]   
+capabilities:
+    - gps
+

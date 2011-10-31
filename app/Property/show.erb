@@ -1,0 +1,191 @@
+<div class="pageTitle">
+  <h1><%= @property.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :controller => :Enquiry, :action => :new, :id => @property.object %>">Send Enquiry</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>    
+
+	 <li>
+	<div class="itemLabel">Gallery</div>   
+	<table><tr>    
+	
+<% @gallery.each do |photo| %>
+             <td>
+            <div class="itemValue"><img src="<%= "http://s3.amazonaws.com/Khmobile/#{photo.object}/thumb/#{photo.photo_file_name}"  %>" ></img></div>   
+</td> 
+<% end %>   
+</tr></table>
+      </li>    
+	<li>
+
+	<a href="<%= url_for( :action => :map_it, :id => @property.object) %>"
+	<span class="title">Show on map</span>
+	<span class="disclosure_indicator"></span>
+	</li>
+        <li>
+          <div class="itemLabel">Title</div>
+          <div class="itemValue"><%= @property.title %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Address</div>
+          <div class="itemValue"><%= @property.address %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">City</div>
+          <div class="itemValue"><%= @property.city %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">State</div>
+          <div class="itemValue"><%= @property.state %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Country</div>
+          <div class="itemValue"><%= @property.country %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Price</div>
+          <div class="itemValue"><%= @property.price %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Description</div>
+          <div class="itemValue"><%= @property.description %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Builder</div>
+          <div class="itemValue"><%= @property.builder %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Beds</div>
+          <div class="itemValue"><%= @property.beds %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Bathrooms</div>
+          <div class="itemValue"><%= @property.bathrooms %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Kitchens</div>
+          <div class="itemValue"><%= @property.kitchens %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">YearBuild</div>
+          <div class="itemValue"><%= @property.year_build %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Floor</div>
+          <div class="itemValue"><%= @property.floor %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Condition</div>
+          <div class="itemValue"><%= @property.condition %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PlayArea</div>
+          <div class="itemValue"><%= @property.play_area %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">TarRoads</div>
+          <div class="itemValue"><%= @property.tar_roads %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">ClubHouse</div>
+          <div class="itemValue"><%= @property.club_house %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">SwimmingPool</div>
+          <div class="itemValue"><%= @property.swimming_pool %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PartyHall</div>
+          <div class="itemValue"><%= @property.party_hall %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">HealthClub</div>
+          <div class="itemValue"><%= @property.health_club %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Garden</div>
+          <div class="itemValue"><%= @property.garden %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Security</div>
+          <div class="itemValue"><%= @property.security %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Intercom</div>
+          <div class="itemValue"><%= @property.intercom %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Featured</div>
+          <div class="itemValue"><%= @property.featured %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CatId</div>
+          <div class="itemValue"><%= @property.cat_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">BuilderId</div>
+          <div class="itemValue"><%= @property.builder_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CreatedAt</div>
+          <div class="itemValue"><%= @property.created_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">UpdatedAt</div>
+          <div class="itemValue"><%= @property.updated_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Sold</div>
+          <div class="itemValue"><%= @property.sold %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Latitude</div>
+          <div class="itemValue"><%= @property.latitude %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Longitude</div>
+          <div class="itemValue"><%= @property.longitude %></div>
+        </li>   
+
+    
+  </ul>
+</div>

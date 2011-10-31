@@ -1,0 +1,53 @@
+<div class="pageTitle">
+  <h1><%= @payment.plan %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @payment.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    
+        <li>
+          <div class="itemLabel">Plan</div>
+          <div class="itemValue"><%= @payment.plan %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Price</div>
+          <div class="itemValue"><%= @payment.price %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Expiry</div>
+          <div class="itemValue"><%= @payment.expiry %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Status</div>
+          <div class="itemValue"><%= @payment.status %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PropertyId</div>
+          <div class="itemValue"><%= @payment.property_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CreatedAt</div>
+          <div class="itemValue"><%= @payment.created_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">UpdatedAt</div>
+          <div class="itemValue"><%= @payment.updated_at %></div>
+        </li>
+    
+  </ul>
+</div>

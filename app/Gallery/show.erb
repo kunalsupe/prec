@@ -1,0 +1,63 @@
+<div class="pageTitle">
+  <h1><%= @gallery.title %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @gallery.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>   
+
+        <li>
+          <div class="itemLabel">Title</div>
+          <div class="itemValue"><%= @gallery.title %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CreatedAt</div>
+          <div class="itemValue"><%= @gallery.created_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">UpdatedAt</div>
+          <div class="itemValue"><%= @gallery.updated_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PhotoFileName</div>
+          <div class="itemValue"><%= @gallery.photo_file_name %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PhotoContentType</div>
+          <div class="itemValue"><%= @gallery.photo_content_type %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PhotoFileSize</div>
+          <div class="itemValue"><%= @gallery.photo_file_size %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PhotoUpdatedAt</div>
+          <div class="itemValue"><%= @gallery.photo_updated_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PropertyId</div>
+          <div class="itemValue"><%= @gallery.property_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Id</div>
+          <div class="itemValue"><%= @gallery.object %></div>
+        </li>
+    
+  </ul>
+</div>

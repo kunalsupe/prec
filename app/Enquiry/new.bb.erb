@@ -1,0 +1,59 @@
+<div id="pageTitle">
+    <h1>New Enquiry</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @enquiry.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Name: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[name]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Email: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[email]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Contact: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[contact]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Message: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[message]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Property: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[property_id]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Created at: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[created_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Updated at: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[updated_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Is read: </td>
+    			  <td class="itemValue"><input type="text" name="enquiry[is_read]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

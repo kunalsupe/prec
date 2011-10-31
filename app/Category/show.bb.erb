@@ -1,0 +1,36 @@
+<div id="pageTitle">
+	<h1><%= @category.title%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @category.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Title</td>
+        <td class="itemValue"><%= @category.title%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Price</td>
+        <td class="itemValue"><%= @category.price%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CreatedAt</td>
+        <td class="itemValue"><%= @category.created_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UpdatedAt</td>
+        <td class="itemValue"><%= @category.updated_at%></td>
+      </tr>
+      
+    </table>
+</div>

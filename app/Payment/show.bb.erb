@@ -1,0 +1,51 @@
+<div id="pageTitle">
+	<h1><%= @payment.plan%></h1>
+</div>
+
+<div id="toolbar">
+        <%= link_to "Back", :action => :index %>
+        <%= link_to "Edit", :action => :edit, :id => @payment.object %>
+</div>
+
+
+<div id="content">
+
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Plan</td>
+        <td class="itemValue"><%= @payment.plan%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Price</td>
+        <td class="itemValue"><%= @payment.price%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Expiry</td>
+        <td class="itemValue"><%= @payment.expiry%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Status</td>
+        <td class="itemValue"><%= @payment.status%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PropertyId</td>
+        <td class="itemValue"><%= @payment.property_id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">CreatedAt</td>
+        <td class="itemValue"><%= @payment.created_at%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UpdatedAt</td>
+        <td class="itemValue"><%= @payment.updated_at%></td>
+      </tr>
+      
+    </table>
+</div>

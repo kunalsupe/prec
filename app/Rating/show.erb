@@ -1,0 +1,53 @@
+<div class="pageTitle">
+  <h1><%= @rating.rate %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :index %>">Back</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a href="<%= url_for :action => :edit, :id => @rating.object %>">Edit</a>
+  </div>
+</div>
+
+<div class="content">
+  <ul>
+    
+        <li>
+          <div class="itemLabel">Rate</div>
+          <div class="itemValue"><%= @rating.rate %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CommentTitle</div>
+          <div class="itemValue"><%= @rating.comment_title %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Comment</div>
+          <div class="itemValue"><%= @rating.comment %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">Approved</div>
+          <div class="itemValue"><%= @rating.approved %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">PropertyId</div>
+          <div class="itemValue"><%= @rating.property_id %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">CreatedAt</div>
+          <div class="itemValue"><%= @rating.created_at %></div>
+        </li>
+    
+        <li>
+          <div class="itemLabel">UpdatedAt</div>
+          <div class="itemValue"><%= @rating.updated_at %></div>
+        </li>
+    
+  </ul>
+</div>

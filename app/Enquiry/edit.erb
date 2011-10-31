@@ -1,0 +1,62 @@
+<div class="pageTitle">
+  <h1>Edit <%= @enquiry.name %></h1>
+</div>
+
+<div class="toolbar">
+  <div class="leftItem backButton">
+    <a href="<%= url_for :action => :show, :id => @enquiry.object %>">Cancel</a>
+  </div>
+  <div class="rightItem regularButton">
+    <a class="button" href="<%= url_for :action => :delete, :id => @enquiry.object %>">Delete</a>
+  </div>
+</div>
+
+<div class="content">
+  <form method="POST" action="<%= url_for :action => :update %>">
+    <input type="hidden" name="id" value="<%= @enquiry.object %>"/>
+    <ul>
+      
+          <li>
+            <label for="enquiry[name]" class="fieldLabel">Name</label>
+            <input type="text" name="enquiry[name]" value="<%= @enquiry.name %>" <%= placeholder( "Name" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[email]" class="fieldLabel">Email</label>
+            <input type="text" name="enquiry[email]" value="<%= @enquiry.email %>" <%= placeholder( "Email" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[contact]" class="fieldLabel">Contact</label>
+            <input type="text" name="enquiry[contact]" value="<%= @enquiry.contact %>" <%= placeholder( "Contact" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[message]" class="fieldLabel">Message</label>
+            <input type="text" name="enquiry[message]" value="<%= @enquiry.message %>" <%= placeholder( "Message" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[property_id]" class="fieldLabel">Property</label>
+            <input type="text" name="enquiry[property_id]" value="<%= @enquiry.property_id %>" <%= placeholder( "Property" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[created_at]" class="fieldLabel">Created at</label>
+            <input type="text" name="enquiry[created_at]" value="<%= @enquiry.created_at %>" <%= placeholder( "Created at" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[updated_at]" class="fieldLabel">Updated at</label>
+            <input type="text" name="enquiry[updated_at]" value="<%= @enquiry.updated_at %>" <%= placeholder( "Updated at" ) %> />
+          </li>
+      
+          <li>
+            <label for="enquiry[is_read]" class="fieldLabel">Is read</label>
+            <input type="text" name="enquiry[is_read]" value="<%= @enquiry.is_read %>" <%= placeholder( "Is read" ) %> />
+          </li>
+      
+    </ul>
+    <input type="submit" class="standardButton" value="Update"/>
+  </form>
+</div>

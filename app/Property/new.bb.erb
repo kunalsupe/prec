@@ -1,0 +1,174 @@
+<div id="pageTitle">
+    <h1>New Property</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @property.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Title: </td>
+    			  <td class="itemValue"><input type="text" name="property[title]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Address: </td>
+    			  <td class="itemValue"><input type="text" name="property[address]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">City: </td>
+    			  <td class="itemValue"><input type="text" name="property[city]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">State: </td>
+    			  <td class="itemValue"><input type="text" name="property[state]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Country: </td>
+    			  <td class="itemValue"><input type="text" name="property[country]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Price: </td>
+    			  <td class="itemValue"><input type="text" name="property[price]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Description: </td>
+    			  <td class="itemValue"><input type="text" name="property[description]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Builder: </td>
+    			  <td class="itemValue"><input type="text" name="property[builder]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Beds: </td>
+    			  <td class="itemValue"><input type="text" name="property[beds]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Bathrooms: </td>
+    			  <td class="itemValue"><input type="text" name="property[bathrooms]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Kitchens: </td>
+    			  <td class="itemValue"><input type="text" name="property[kitchens]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Year build: </td>
+    			  <td class="itemValue"><input type="text" name="property[year_build]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Floor: </td>
+    			  <td class="itemValue"><input type="text" name="property[floor]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Condition: </td>
+    			  <td class="itemValue"><input type="text" name="property[condition]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Play area: </td>
+    			  <td class="itemValue"><input type="text" name="property[play_area]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Tar roads: </td>
+    			  <td class="itemValue"><input type="text" name="property[tar_roads]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Club house: </td>
+    			  <td class="itemValue"><input type="text" name="property[club_house]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Swimming pool: </td>
+    			  <td class="itemValue"><input type="text" name="property[swimming_pool]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Party hall: </td>
+    			  <td class="itemValue"><input type="text" name="property[party_hall]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Health club: </td>
+    			  <td class="itemValue"><input type="text" name="property[health_club]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Garden: </td>
+    			  <td class="itemValue"><input type="text" name="property[garden]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Security: </td>
+    			  <td class="itemValue"><input type="text" name="property[security]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Intercom: </td>
+    			  <td class="itemValue"><input type="text" name="property[intercom]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Featured: </td>
+    			  <td class="itemValue"><input type="text" name="property[featured]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Cat: </td>
+    			  <td class="itemValue"><input type="text" name="property[cat_id]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Builder: </td>
+    			  <td class="itemValue"><input type="text" name="property[builder_id]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Created at: </td>
+    			  <td class="itemValue"><input type="text" name="property[created_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Updated at: </td>
+    			  <td class="itemValue"><input type="text" name="property[updated_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Sold: </td>
+    			  <td class="itemValue"><input type="text" name="property[sold]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Latitude: </td>
+    			  <td class="itemValue"><input type="text" name="property[latitude]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Longitude: </td>
+    			  <td class="itemValue"><input type="text" name="property[longitude]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

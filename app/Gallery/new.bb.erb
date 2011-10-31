@@ -1,0 +1,64 @@
+<div id="pageTitle">
+    <h1>New Gallery</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @gallery.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Title: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[title]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Created at: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[created_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Updated at: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[updated_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Photo file name: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[photo_file_name]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Photo content type: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[photo_content_type]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Photo file size: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[photo_file_size]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Photo updated at: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[photo_updated_at]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Property: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[property_id]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Id: </td>
+    			  <td class="itemValue"><input type="text" name="gallery[id]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

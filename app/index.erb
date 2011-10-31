@@ -1,0 +1,54 @@
+<div class="pageTitle">
+  <h1>Propertymanager</h1>
+</div>
+
+<div class="toolbar">
+  <% if SyncEngine::logged_in > 0 %>
+      <div class="leftItem blueButton">
+        <a href="<%= url_for :controller => :Settings, :action => :do_sync %>">Refresh</a>
+      </div>
+ <% end %>     
+</div>
+
+<div class="content">
+  <ul>
+    <li>
+      <a href="Property"><span class="title">Properties</span><span class="disclosure_indicator"/></a>
+    </li> 
+
+  <li>
+      <a href="Gallery"><span class="title">Galleries</span><span class="disclosure_indicator"/></a>
+    </li>
+
+  	 <li> <a href="<%= url_for :controller => :Property, :action => :rentprop %> "><span class="title">To Rent</span><span class="disclosure_indicator"/></a>
+     </li>
+    
+ <li> <a href="<%= url_for :controller => :Property, :action => :saleprop %>"><span class="title">For Sale</span><span class="disclosure_indicator"/></a> 
+     </li>    
+
+	<li> <a href="<%= url_for :controller => :Property, :action => :sold %> "><span class="title">Sold</span><span class="disclosure_indicator"/></a>
+     </li>
+
+ <li> <a href="<%= url_for :controller => :Property, :action => :featured %>"><span class="title">Featured</span><span class="disclosure_indicator"/></a> 
+     </li>  
+
+	 <li> <a href="<%= url_for :controller => :Property, :action => :search %>"><span class="title">Search</span><span class="disclosure_indicator"/></a> 
+	     </li> 
+	  <li> <a href="<%= url_for :controller => :Enquiry, :action => :index %>"><span class="title">Enquiru</span><span class="disclosure_indicator"/></a> 
+		     </li>
+
+  </ul>
+</div>                  
+
+
+
+
+
+
+
+
+
+
+
+
+
